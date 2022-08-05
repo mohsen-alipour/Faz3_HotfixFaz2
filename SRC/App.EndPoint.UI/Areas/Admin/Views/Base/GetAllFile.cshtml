@@ -1,0 +1,21 @@
+﻿@model List<AdminFileViewModel>
+
+<table class="table table-dark table-striped">
+  
+    <tr>      
+        <th>شناسه عکس</th>
+        <th>تاریخ بارگذاری</th>
+        <th>نام عکس</th>
+        <th>عکس</th>     
+    </tr>
+    @foreach(var item in Model)
+ {     
+    <tr>  
+        <th>@item.Id</th>       
+        <th>@item.CreatedAt</th>       
+        <th>@item.FileNme</th>       
+        <th><img src="~/Media/@item.FileNme" class="img-fluid col-3"> </th>       
+
+    </tr>
+}
+</table>

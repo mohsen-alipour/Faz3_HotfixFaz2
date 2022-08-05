@@ -1,0 +1,37 @@
+﻿
+@model List<UserViewmodel>
+
+@*<a class="btn btn-success" asp-area="Admin"asp-controller="Dashboard" asp-action="RegisterUser">ایجاد</a>*@
+
+<table class="table table-dark table-striped">
+     <tr>
+        <th>ردیف</th>
+        <th>نام</th>
+         <th>نام خانوادگی</th>
+        <th>شناسه کاربری</th>
+        <th>وضعیت کاربر</th>
+        <th>شماره تلفن</th>
+        <th>تارخ ساخت</th>
+        <th>عملیات</th>
+    </tr>
+ 
+    @foreach(var item in Model)
+ {     
+    <tr>
+        <th>@item.Id</th>
+        <th>@item.FirstName</th>
+        <th>@item.LastName</th>
+        <th>@item.UserName</th>
+        <th>@item.Isactive</th>
+        <th>@item.PhoneNumber</th>
+        <th>@item.CreatedAt</th>
+        
+        <th>
+           <a class="btn btn-info" asp-area="Admin" asp-controller="AdminDashboard"asp-action="Detail"asp-route-id="@item.Id" >مشاهده</a>
+            <a class="btn btn-warning" asp-area="Admin"asp-controller="AdminDashboard"asp-action="Edit"asp-route-id="@item.Id">ویرایش</a>
+            <a class="btn btn-danger"asp-area="Admin"asp-controller="AdminDashboard"asp-action="Delete"asp-route-id="@item.Id">حذف</a>
+        </th>
+    </tr>
+}
+</table>
+

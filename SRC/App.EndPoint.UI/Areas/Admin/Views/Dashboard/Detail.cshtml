@@ -1,0 +1,32 @@
+﻿
+@model Usermanagmentviewmodel
+
+
+    <div>
+     <label asp-for="FirstName" class="col-sm-2 col-form-label"></label>  
+     <input type="text" class="form-control"  asp-for="FirstName" readonly="readonly">
+    </div>
+    <div>
+      <label asp-for="LastName" class="col-sm-2 col-form-label"></label>  
+      <input type="text" class="form-control" asp-for="LastName" readonly="readonly">
+    </div>
+       <div>
+      <label asp-for="UserName" class="col-sm-2 col-form-label"></label>  
+      <input type="text" class="form-control" asp-for="UserName" readonly="readonly">
+    </div>
+      <div>
+     <label class="container" asp-for="Isactive" class="col-sm-2 col-form-label"> </label> 
+       <input type="checkbox" class="checkmark" asp-for="Isactive" readonly="readonly">
+      
+    </div>
+      <div>
+     <label asp-for="PhoneNumber" class="col-sm-2 col-form-label"></label>  
+     <input type="text" class="form-control"  asp-for="PhoneNumber" readonly="readonly">
+    </div>
+   
+    <div>
+          
+        <a class="btn btn-primary" asp-area="Admin" asp-controller="Dashboard"asp-action="UserList">بازگشت به لیست</a>
+    </div>
+
+

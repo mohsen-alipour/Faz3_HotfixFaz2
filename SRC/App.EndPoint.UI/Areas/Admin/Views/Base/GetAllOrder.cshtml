@@ -1,0 +1,30 @@
+﻿@model List<OrderViewModel>
+
+<table class="table table-dark table-striped">
+  
+    <tr>
+        <th>عنوان سرویس</th>
+        <th>شناسه مشتری</th>
+        <th>قیمت پایه</th>
+        <th>قیمت نهایی</th>
+        <th>تاریخ سفارش </th>
+        <th>وضعیت</th>
+        <th>کارشناس</th>
+     
+    </tr>
+  
+ 
+    @foreach(var item in Model)
+ {     
+    <tr>
+        <th>@item.ServiceTitle</th>
+        <th>@item.CustomerUserName</th>       
+        <th>@item.BasePrice</th>       
+        <th>@item.TotalPrice</th>       
+        <th>@item.OrderDate</th> 
+        <th>@item.StatusTitle</th>
+        <th>@item.FainalExpertUserName</th> 
+       
+    </tr>
+}
+</table>

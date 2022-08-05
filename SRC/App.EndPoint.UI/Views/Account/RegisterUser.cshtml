@@ -1,0 +1,45 @@
+﻿@model Usermanagmentviewmodel
+<h1 class="mb-5">صفحه اضافه کردن کاربر  </h1>
+
+<form class="">
+  
+    <div>
+     <label asp-for="FirstName" class="col-sm-2 col-form-label"></label>  
+     <input type="text" class="form-control"  asp-for="FirstName">
+    </div>
+    <div>
+      <label asp-for="LastName" class="col-sm-2 col-form-label"></label>  
+      <input type="text" class="form-control" asp-for="LastName">
+    </div>
+       <div>
+      <label asp-for="UserName" class="col-sm-2 col-form-label"></label>  
+      <input type="text" class="form-control" asp-for="UserName">
+       <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+  @*    <div>
+     <label class="container" asp-for="Isactive" class="col-sm-2 col-form-label"> </label> 
+       <input type="checkbox" class="checkmark" asp-for="Isactive">
+      
+    </div>*@
+      <div>
+     <label asp-for="PhoneNumber" class="col-sm-2 col-form-label"></label>  
+     <input type="text" class="form-control"  asp-for="PhoneNumber">
+      <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+       <div>
+     <label asp-for="Password" class="col-sm-2 col-form-label"></label>  
+     <input type="password" class="form-control"  asp-for="Password">
+      <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+     <div>
+     <label asp-for="ConfirmPassword" class="col-sm-2 col-form-label"></label>  
+     <input  type="password" class="form-control"  asp-for="ConfirmPassword">
+      <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <div>
+        <input type="submit" class="btn btn-success" asp-area="" asp-controller="Account" asp-action="RegisterUser" formmethod="post" value="ثبت"/>
+    
+        <a class="btn btn-primary" asp-area="" asp-controller="Account"asp-action="Login">خروج</a>
+    </div>
+    
+</form>

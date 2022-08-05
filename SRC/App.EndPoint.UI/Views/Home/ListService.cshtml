@@ -1,0 +1,34 @@
+﻿@model List<ListServiceViewModel>
+<head>
+       
+</head>
+<body>
+
+            <h1>لیست خدمات موجود</h1>
+<table class="table table-dark table-striped">
+     <tr>
+        <th>شناسه سرویس</th>
+        <th>دسته بندی خدمات</th>
+         <th>عنوان سرویس</th>
+        <th>توضیحات</th>
+         <th>قیمت پایه</th>        
+        <th>عملیات</th>
+    </tr>
+ 
+    @foreach(var item in Model)
+ {     
+    <tr>
+        <th>@item.Id</th>
+        <th>@item.CategoryTitle</th>
+        <th>@item.Title</th>
+        <th>@item.ShortDescription</th>
+        <th>@item.Price</th>
+             
+        <th>
+        <a class="btn btn-info" asp-area="" asp-controller="Home"asp-action="SabtOrder" asp-route-id="@item.Id" >انتخاب</a>
+        </th>
+    </tr>
+}
+</table>
+           
+</body>

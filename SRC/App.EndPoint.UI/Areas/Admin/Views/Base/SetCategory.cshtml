@@ -1,0 +1,16 @@
+﻿@model OutputCategoryViewModel
+<h1 class="mb-5">صفحه اضافه کردن دسته بندی خدمات  </h1>
+
+<form class="">
+  
+    <div>
+     <label asp-for="Title" class="col-sm-2 col-form-label"></label>  
+     <input type="text" class="form-control"  asp-for="Title">
+
+    <div>
+        <input type="submit" class="btn btn-success" asp-area="Admin" asp-controller="Base" asp-action="SetCategory" formmethod="post" value="ثبت"/>
+    
+        <a class="btn btn-primary" asp-area="Admin" asp-controller="Base"asp-action="GetAllCategory">بازگشت به لیست</a>
+    </div>
+    
+</form>

@@ -1,0 +1,26 @@
+﻿@model List<OutputCategoryViewModel>
+
+<a class="btn btn-success" asp-area="Admin"asp-controller="Base" asp-action="SetCategory">ایجاد</a>
+
+<table class="table table-dark table-striped">
+  
+    <tr>
+        <th>شناسه سرویس</th>
+        <th>عنوان</th>
+        <th>عملیات</th>
+    </tr>
+  
+ 
+    @foreach(var item in Model)
+ {     
+    <tr>
+        <th>@item.Id</th>
+        <th>@item.Title</th>       
+        <th>
+
+            <a class="btn btn-warning" asp-area="Admin"asp-controller="Base"asp-action="EditCategory"asp-route-id="@item.Id">ویرایش</a>
+            <a class="btn btn-danger"asp-area="Admin"asp-controller="Base"asp-action="DeleteCategory"asp-route-id="@item.Id">حذف</a>
+        </th>
+    </tr>
+}
+</table>

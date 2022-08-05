@@ -1,0 +1,23 @@
+﻿@model OutputCategoryViewModel
+
+<h1 class="mb-5">صفحه اضافه ویرایش سرویس ها  </h1>
+
+<form class="">
+  
+    <div>
+     <label asp-for="Id" class="col-sm-2 col-form-label"></label>  
+     <input type="text" class="form-control"  asp-for="Id" readonly="readonly">
+    </div>
+    <div>
+      <label asp-for="Title" class="col-sm-2 col-form-label"></label>  
+      <input type="text" class="form-control" asp-for="Title">
+    </div>
+ 
+   
+    <div>
+        <input type="submit" class="btn btn-success" asp-area="Admin" asp-controller="Base" asp-action="EditCategory" formmethod="post" value="ثبت"/>
+    
+        <a class="btn btn-primary" asp-area="Admin" asp-controller="Base"asp-action="GetAllCategory">بازگشت به لیست</a>
+    </div>
+    
+</form>

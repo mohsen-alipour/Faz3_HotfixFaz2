@@ -1,0 +1,34 @@
+﻿@model ServiceViewModel
+<h1 class="mb-5">صفحه ایجاد سرویس جدید  </h1>
+
+<form class="">
+  
+
+    <div class="col-8">
+      <select  class="pt-md-3" asp-for="categuryid" asp-items="@ViewBag.category">
+          <option selected>--- انتخاب دسته بندی </option>
+      </select>
+      <span asp-validation-for="CategoryTitle" class="text-danger"></span>
+    </div>
+
+    <div>
+     <label asp-for="Title" class="col-sm-2 col-form-label"></label>  
+     <input type="text" class="form-control"  asp-for="Title">
+
+    <div>
+            <div>
+     <label asp-for="ShortDescription" class="col-sm-2 col-form-label"></label>  
+     <input type="text" class="form-control"  asp-for="ShortDescription">
+
+    <div>
+    <div>
+     <label asp-for="Price" class="col-sm-2 col-form-label"></label>  
+     <input type="text" class="form-control"  asp-for="Price">
+
+    <div>
+        <input type="submit" class="btn btn-success" asp-area="Admin" asp-controller="Base" asp-action="setservice" formmethod="post" value="ثبت"/>
+    
+        <a class="btn btn-primary" asp-area="Admin" asp-controller="Base"asp-action="GetAllService">بازگشت به لیست</a>
+    </div>
+    
+</form>
